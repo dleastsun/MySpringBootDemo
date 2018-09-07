@@ -21,7 +21,7 @@ public interface MybatisUserXMLMapper {
 
     UserInfo getUser(@Param("id") Integer id);
 
-    void updateUser(@Param("userId") String user_id, @Param("nickName") String nickName);
+    void updateUser(@Param("id") String user_id, @Param("name") String name);
 
     void deleteUserByUserId(UserInfo userInfo);
 }

@@ -49,10 +49,10 @@ public class XMLController {
             @ApiImplicitParam(name = "nickName",value = "用户昵称",required = true,dataType = "String")
     })
     @PutMapping("/updateUser/{id}")
-    public Result updateUser(@PathVariable("id") String user_id, @RequestParam("nickName") String nickName){
+    public Result updateUser(@PathVariable("id") String userId, @RequestParam("name") String name){
         Result result = ResultUtil.success();
         try {
-            service.updateUser(user_id,nickName);
+            service.updateUser(userId,name);
         }catch (Exception e){
 //            result = handle.exceptionGet(e);
         }
@@ -86,7 +86,7 @@ public class XMLController {
     @ApiOperation(value = "删除用户",notes = "根据用户id删除用户")
     @ApiImplicitParam(name = "id",value = "用户id",required = true,dataType = "Integer")
     @DeleteMapping("/deleteUserByUserId/{tel}")
-    public Result deleteUserByUserId(@PathVariable("tel")  String tel){
+    public Result deleteUserByUserId(@PathVariable("id")  String id){
         Result result = ResultUtil.success();
         try {
             UserInfo user  = new UserInfo();

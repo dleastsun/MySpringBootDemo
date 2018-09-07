@@ -20,8 +20,8 @@ public class XMLService {
     private MybatisUserXMLMapper mapper;
 
 
-    public void updateUser(String user_id, String nickName) {
-        mapper.updateUser(user_id,nickName);
+    public void updateUser(String id, String name) {
+        mapper.updateUser(id,name);
     }
 
     public UserInfo getUser(Integer id) {
