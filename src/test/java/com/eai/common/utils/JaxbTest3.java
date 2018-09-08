@@ -1,13 +1,12 @@
-package com.eai.utils;
+package com.eai.common.utils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
 
-import com.eai.common.utils.JaxbUtil;
-import com.eai.utils.model.Country;
-import com.eai.utils.model.Province;
+import com.eai.common.utils.model.Country;
+import com.eai.common.utils.model.Province;
 
 public class JaxbTest3 {
 	@Test

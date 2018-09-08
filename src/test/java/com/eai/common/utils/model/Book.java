@@ -1,4 +1,4 @@
-package com.eai.utils.model;
+package com.eai.common.utils.model;
 
 import java.util.Date;
 

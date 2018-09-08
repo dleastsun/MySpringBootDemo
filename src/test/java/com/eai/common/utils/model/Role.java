@@ -1,4 +1,4 @@
-package com.eai.utils.model;
+package com.eai.common.utils.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

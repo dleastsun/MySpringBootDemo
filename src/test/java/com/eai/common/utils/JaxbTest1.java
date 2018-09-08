@@ -1,4 +1,4 @@
-package com.eai.utils;
+package com.eai.common.utils;
 
 import java.util.Date;
 
@@ -6,8 +6,7 @@ import javax.xml.bind.JAXBException;
 
 import org.junit.Test;
 
-import com.eai.common.utils.JaxbUtil;
-import com.eai.utils.model.Book;
+import com.eai.common.utils.model.Book;
 
 /**
  * 

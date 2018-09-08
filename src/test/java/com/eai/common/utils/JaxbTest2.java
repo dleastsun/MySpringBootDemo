@@ -1,10 +1,9 @@
-package com.eai.utils;
+package com.eai.common.utils;
 
 import org.junit.Test;
 
-import com.eai.common.utils.JaxbUtil;
-import com.eai.utils.model.Role;
-import com.eai.utils.model.Student;
+import com.eai.common.utils.model.Role;
+import com.eai.common.utils.model.Student;
 
 public class JaxbTest2 {
 	@Test  
