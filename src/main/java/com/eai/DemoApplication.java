@@ -26,7 +26,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class DemoApplication {
 
 	public static void main(String[] args) throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
-		
 		Set<Object> set = new HashSet<>();
 		set.add("classpath:batch-config.xml");
 		set.add("classpath:quartz-config.xml");
