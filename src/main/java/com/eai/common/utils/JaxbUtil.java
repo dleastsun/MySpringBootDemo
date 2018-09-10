@@ -6,7 +6,11 @@ import java.io.StringWriter;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-
+/**
+ * 
+ * @author lixudong
+ *
+ */
 public class JaxbUtil {
 	/** 
      * JavaBean转换成xml 

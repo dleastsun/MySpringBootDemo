@@ -8,13 +8,19 @@ package com.eai.compont;
  */
 public class Result<T> {
 
-//    error_code
+    /**
+     * code
+     */
     private Integer code;
 
-//    error_msg
+    /**
+     * error_msg
+     */
     private String msg;
 
-//    content
+    /**
+     * content
+     */
     private T data;
 
     public Integer getCode() {
