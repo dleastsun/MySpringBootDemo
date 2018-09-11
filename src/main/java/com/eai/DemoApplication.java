@@ -9,11 +9,18 @@ import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteExcep
 import org.springframework.batch.core.repository.JobRestartException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 import com.eai.common.utils.SpringContextUtil;
+import com.eai.listener.CustomListener;
+import com.eai.servlet.CustomServlet;
 
 //@EnableBatchProcessing
+@ServletComponentScan
 @SpringBootApplication
 public class DemoApplication {
 
@@ -26,5 +33,23 @@ public class DemoApplication {
 		app.setSources(set);
 		ApplicationContext context = app.run(args);
 		SpringContextUtil.setApplicationContext(context);
+	}
+	
+	/**
+	 * 注册servlet
+	 * @return
+	 */
+	@Bean
+	public ServletRegistrationBean servletRegistrationBean() {
+		return new ServletRegistrationBean(new CustomServlet(), "/customServlet");
+	}
+	
+	/**
+	 * 注册listener
+	 * @return
+	 */
+	@Bean
+	public ServletListenerRegistrationBean<CustomListener> servletListenerRegistrationBean() {
+		return new ServletListenerRegistrationBean<CustomListener>(new CustomListener());
 	}
 }

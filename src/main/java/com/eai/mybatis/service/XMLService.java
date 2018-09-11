@@ -13,7 +13,7 @@ import com.eai.mybatis.domain.UserInfo;
  * @author xudong.li
  *
  */
-@Service
+@Service("xmlService")
 public class XMLService {
 
     @Autowired
