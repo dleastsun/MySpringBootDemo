@@ -1,12 +1,13 @@
 package com.eai.common.utils;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 /**
  * 
  * @author xudong.li
  *
  */
-public class SpringContextUtil {
+public class SpringContextUtil  implements ApplicationContextAware {
 	
 	private static ApplicationContext applicationContext;
  
@@ -16,7 +17,7 @@ public class SpringContextUtil {
 	}
  
 	//设置上下文
-	public static void setApplicationContext(ApplicationContext applicationContext) {
+	public  void setApplicationContext(ApplicationContext applicationContext) {
 		SpringContextUtil.applicationContext = applicationContext;
 	}
  
@@ -29,5 +30,10 @@ public class SpringContextUtil {
 	public static <T> T getBean(Class<T> requiredType){
 		return applicationContext.getBean(requiredType);
 	}
+	
+	//通过name,以及Clazz返回指定的Bean
+    public static <T> T getBean(String name,Class<T> clazz){
+        return getApplicationContext().getBean(name, clazz);
+    }
  
 }
