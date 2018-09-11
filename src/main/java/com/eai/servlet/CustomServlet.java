@@ -31,7 +31,7 @@ public class CustomServlet extends HttpServlet {
 		XMLService service =(XMLService)SpringContextUtil.getBean("xmlService");
 		
 		Map<String, Object> reqMap=new HashMap<String,Object>();
-		reqMap.put("id", "999");
+		reqMap.put("id", "1000");
 		reqMap.put("name", "lixudong");
 		reqMap.put("age", 100);
 		service.createUser(reqMap);
