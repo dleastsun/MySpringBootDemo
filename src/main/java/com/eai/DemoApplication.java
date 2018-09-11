@@ -25,6 +25,6 @@ public class DemoApplication {
 		SpringApplication app = new SpringApplication(DemoApplication.class);
 		app.setSources(set);
 		ApplicationContext context = app.run(args);
-		SpringContextUtil.setApplicationContext(context);
+		//SpringContextUtil.setApplicationContext(context);
 	}
 }
