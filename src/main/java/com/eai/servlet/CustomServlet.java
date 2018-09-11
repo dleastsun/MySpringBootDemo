@@ -19,9 +19,6 @@ import com.eai.mybatis.service.XMLService;
  */
 public class CustomServlet extends HttpServlet {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Override
