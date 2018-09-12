@@ -156,22 +156,27 @@
 		</dependency>
 		<!--web 支持 -->
 		<!--jsp页面使用jstl标签 -->
-		 <dependency>
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-		</dependency> 
+		</dependency>
 		<!--用于编译jsp -->
-		 <dependency>
+		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 			<scope>provided</scope>
-		</dependency> 
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<!--web 支持 -->
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.3</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -182,13 +187,13 @@
 			</plugin>
 		</plugins>
 		<resources>
-            <resource>
-                <directory>src/main/resources</directory>
-            </resource>
-            <resource>
-                <directory>src/main/webapp</directory>
-            </resource>
-        </resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>src/main/webapp</directory>
+			</resource>
+		</resources>
 	</build>
 
 
