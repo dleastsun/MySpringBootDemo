@@ -9,6 +9,7 @@ import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -33,6 +34,7 @@ public class FirstController {
 	@Value(value = "${eai.number}")
 	private String number;
 
+	//@CrossOrigin(origins = "http://localhost:8080")//允许跨域访问
 	@RequestMapping(value = { "/get/{id}" })
 	public String first(@PathVariable("id") Integer id) {
 
