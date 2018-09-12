@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationContextAware;
  * @author xudong.li
  *
  */
-public class SpringContextUtil  implements ApplicationContextAware {
+public class SpringContextUtil  /*implements ApplicationContextAware*/ {
 	
 	private static ApplicationContext applicationContext;
  
@@ -17,7 +17,7 @@ public class SpringContextUtil  implements ApplicationContextAware {
 	}
  
 	//设置上下文
-	public  void setApplicationContext(ApplicationContext applicationContext) {
+	public static void setApplicationContext(ApplicationContext applicationContext) {
 		SpringContextUtil.applicationContext = applicationContext;
 	}
  
