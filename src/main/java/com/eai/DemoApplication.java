@@ -10,7 +10,6 @@ import org.springframework.batch.core.repository.JobRestartException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-
 import com.eai.common.utils.SpringContextUtil;
 
 //@EnableBatchProcessing
