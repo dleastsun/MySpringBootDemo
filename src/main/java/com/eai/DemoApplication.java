@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
@@ -20,6 +21,7 @@ import com.eai.listener.CustomListener;
 import com.eai.servlet.CustomServlet;
 
 //@EnableBatchProcessing
+@EnableCaching
 @ServletComponentScan
 @SpringBootApplication
 public class DemoApplication {

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eai.common.utils.SpringContextUtil;
-import com.eai.mybatis.service.XMLService;
+import com.eai.mybatis.service.IXMLService;
 
 /**
  * 自定义servlet
@@ -30,7 +30,7 @@ public class MyServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("servlet get method");
-		XMLService service =(XMLService)SpringContextUtil.getBean("xmlService");
+		IXMLService service =(IXMLService)SpringContextUtil.getBean("xmlService");
 		
 		Map<String, Object> reqMap=new HashMap<String,Object>();
 		reqMap.put("id", "999");

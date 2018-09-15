@@ -17,7 +17,7 @@ import com.eai.common.ExceptionHandle;
 import com.eai.common.utils.ResultUtil;
 import com.eai.compont.Result;
 import com.eai.mybatis.domain.UserInfo;
-import com.eai.mybatis.service.XMLService;
+import com.eai.mybatis.service.IXMLService;
 
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -33,7 +33,7 @@ import io.swagger.annotations.ApiOperation;
 public class XMLController {
 
     @Autowired
-    private XMLService service;
+    private IXMLService service;
 
     @Autowired
     private ExceptionHandle handle;
