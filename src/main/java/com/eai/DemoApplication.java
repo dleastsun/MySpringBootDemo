@@ -15,13 +15,14 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.jms.annotation.EnableJms;
 
 import com.eai.common.utils.SpringContextUtil;
 import com.eai.listener.CustomListener;
 import com.eai.servlet.CustomServlet;
 
 //@EnableBatchProcessing
-
+@EnableJms
 @ServletComponentScan
 @EnableCaching
 @SpringBootApplication

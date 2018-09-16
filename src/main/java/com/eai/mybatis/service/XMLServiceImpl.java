@@ -18,7 +18,7 @@ import com.eai.mybatis.domain.UserInfo;
  * 
  */
 @Service("xmlService")
-@CacheConfig(cacheNames = "myEhCache") 
+@CacheConfig(cacheNames = "myCache") 
 public class XMLServiceImpl implements IXMLService {
 
     @Autowired
