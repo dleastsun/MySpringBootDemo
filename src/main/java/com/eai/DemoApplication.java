@@ -21,8 +21,9 @@ import com.eai.listener.CustomListener;
 import com.eai.servlet.CustomServlet;
 
 //@EnableBatchProcessing
-@EnableCaching
+
 @ServletComponentScan
+@EnableCaching
 @SpringBootApplication
 public class DemoApplication {
 
