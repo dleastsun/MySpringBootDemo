@@ -22,6 +22,7 @@ public class MyFilter implements Filter{
         HttpServletRequest resquest = (HttpServletRequest) servletRequest;
         System.out.println("this is myfilter,url:" + resquest.getRequestURI());
         filterChain.doFilter(servletRequest,servletResponse);
+        System.out.println("this is myfilter end");
     }
 
     @Override

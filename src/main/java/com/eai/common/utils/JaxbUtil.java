@@ -36,8 +36,12 @@ public class JaxbUtil {
             Marshaller marshaller = context.createMarshaller();  
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);  
             marshaller.setProperty(Marshaller.JAXB_ENCODING, encoding);  
-  
+            //去掉原有报文头
+            marshaller.setProperty(Marshaller.JAXB_FRAGMENT, true);
             StringWriter writer = new StringWriter();  
+            //自定义生成
+            writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<!DOCTYPE EAIData SYSTEM \"CNO_SmsIf.dtd\">\n");
+            
             marshaller.marshal(obj, writer);  
             result = writer.toString();  
         } catch (Exception e) {  
