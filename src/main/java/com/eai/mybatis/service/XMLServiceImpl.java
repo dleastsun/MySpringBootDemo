@@ -41,8 +41,8 @@ public class XMLServiceImpl implements IXMLService {
     /* (non-Javadoc)
 	 * @see com.eai.mybatis.service.IXMLService#getUser(java.lang.Integer)
 	 */
-    @Override
-    @Cacheable(value="user",key = "#p0")
+//    @Override
+//    @Cacheable(value="user",key = "#p0")
 	public UserInfo getUser(Integer id) {
         return mapper.getUser(id);
     }

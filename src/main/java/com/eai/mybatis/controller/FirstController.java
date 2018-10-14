@@ -22,8 +22,8 @@ import com.eai.common.utils.SpringContextUtil;
 public class FirstController {
 	private final static Logger LOGGER = LoggerFactory.getLogger(FirstController.class);
 
-	@Autowired
-	private JobLauncher jobLauncher;
+//	@Autowired
+//	private JobLauncher jobLauncher;
 
 	
 	
@@ -53,22 +53,22 @@ public class FirstController {
 		return map;
 	}
 
-	@RequestMapping(value = { "/quartz/{id}" })
-	public String firstQuartz(@PathVariable("id") Integer id) {
-		LOGGER.info("id====" + id);
-		
-		Job job = (Job) SpringContextUtil.getBean("job3");
-		org.springframework.batch.core.JobExecution jobExecution=null;
-        /*启动spring batch的批处理作业*/
-        try {
-		    jobExecution = jobLauncher.run(job, new JobParameters());
-			LOGGER.info("jobExecution====" + jobExecution);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
-
-		return "";
-	}
+//	@RequestMapping(value = { "/quartz/{id}" })
+//	public String firstQuartz(@PathVariable("id") Integer id) {
+//		LOGGER.info("id====" + id);
+//		
+//		Job job = (Job) SpringContextUtil.getBean("job3");
+//		org.springframework.batch.core.JobExecution jobExecution=null;
+//        /*启动spring batch的批处理作业*/
+//        try {
+//		    jobExecution = jobLauncher.run(job, new JobParameters());
+//			LOGGER.info("jobExecution====" + jobExecution);
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} 
+//
+//		return "";
+//	}
 
 }
