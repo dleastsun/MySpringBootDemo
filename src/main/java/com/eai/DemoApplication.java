@@ -15,6 +15,7 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.jms.annotation.EnableJms;
 
 import com.eai.common.utils.SpringContextUtil;
@@ -26,6 +27,7 @@ import com.eai.servlet.CustomServlet;
 @ServletComponentScan
 @EnableCaching
 @SpringBootApplication
+//@ImportResource(locations = { "classpath:druid-bean.xml" })
 public class DemoApplication {
 
 	public static void main(String[] args) throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
