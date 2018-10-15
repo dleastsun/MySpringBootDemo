@@ -2,9 +2,17 @@ package com.eai.springbatch.model;
 
 public class User {
 	private int id;
-	private String name;
+	private String name="";
 	private int age;
 	
+	private String score;
+	
+	public String getScore() {
+		return score;
+	}
+	public void setScore(String score) {
+		this.score = score;
+	}
 	public User() {
 		super();
 	}

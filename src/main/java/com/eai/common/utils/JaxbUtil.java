@@ -6,6 +6,8 @@ import java.io.StringWriter;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamReader;
 /**
  * 
  * @author lixudong
@@ -62,8 +64,17 @@ public class JaxbUtil {
         T t = null;  
         try {  
             JAXBContext context = JAXBContext.newInstance(c);  
+            
+            XMLInputFactory xif = XMLInputFactory.newFactory();
+            xif.setProperty(XMLInputFactory.IS_SUPPORTING_EXTERNAL_ENTITIES, false);
+            xif.setProperty(XMLInputFactory.SUPPORT_DTD, true);
+            XMLStreamReader xsr = xif.createXMLStreamReader(new StringReader(xml));
+            
             Unmarshaller unmarshaller = context.createUnmarshaller();  
-            t = (T) unmarshaller.unmarshal(new StringReader(xml));  
+//            t = (T) unmarshaller.unmarshal(new StringReader(xml));  
+            
+            t = (T) unmarshaller.unmarshal(xsr);
+            
         } catch (Exception e) {  
             e.printStackTrace();  
         }  
