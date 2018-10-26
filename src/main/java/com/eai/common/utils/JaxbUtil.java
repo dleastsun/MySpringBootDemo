@@ -43,7 +43,7 @@ public class JaxbUtil {
             StringWriter writer = new StringWriter();  
             //自定义生成
             writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<!DOCTYPE EAIData SYSTEM \"CNO_SmsIf.dtd\">\n");
-            
+            //可以采用此种方式：marshaller.setProperty("com.sun.xml.internal.bind.xmlHeaders", "<!DOCTYPE EAIData SYSTEM \"CNO_SmsIf.dtd\">\n");
             marshaller.marshal(obj, writer);  
             result = writer.toString();  
         } catch (Exception e) {  
@@ -54,6 +54,8 @@ public class JaxbUtil {
     }  
   
     /** 
+     * spf.setFeature("http://javax.xml.XMLConstants/feature/secure-processing", true);
+       spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
      * xml转换成JavaBean 
      * @param xml 
      * @param c 
