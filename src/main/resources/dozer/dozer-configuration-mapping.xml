@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://dozer.sourceforge.net
+<mappings xmlns="http://dozer.sourceforge.net"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net
           http://dozer.sourceforge.net/schema/beanmapping.xsd">
 
+	<mapping>
+		<class-a>com.eai.common.config.model.Source</class-a><!-- (1) -->
+		<class-b>com.eai.common.config.model.Destination</class-b><!-- (2) -->
+		<field>
+			<a>id</a><!-- (3) -->
+			<b>destinationId</b><!-- (4) -->
+		</field>
+		<field>
+			<a>name</a>
+			<b>destinationName</b>
+		</field>
+	</mapping>
 </mappings>

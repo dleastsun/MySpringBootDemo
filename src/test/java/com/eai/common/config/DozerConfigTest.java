@@ -3,23 +3,48 @@ package com.eai.common.config;
 import org.dozer.DozerBeanMapper;
 import org.dozer.Mapper;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import com.eai.common.config.model.Destination;
+import com.eai.common.config.model.Source;
+import com.ntt.coss.apiswext.DomainTestApplication;
+
+@RunWith(SpringRunner.class)
+//@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = DomainTestApplication.class)
+//@ContextConfiguration(classes = { DozerConfig.class })
+//@ContextConfiguration(locations = {"classpath*:/**/*Mapper.xml"})
+//@Import({DozerConfig.class})
 public class DozerConfigTest {
     
-    private static Mapper dozerMapper;
+//    private static Mapper dozerMapper;
     
-    @Before
-    public void setUp() throws Exception {
-        dozerMapper = new DozerBeanMapper();
-    }
+    @Autowired
+    private Mapper dozerMapper;
+    
+//    @Before
+//    public void setUp() throws Exception {
+//        dozerMapper = new DozerBeanMapper();
+//    }
 
     
-    @Ignore
     @Test
     public void test1() throws Exception {
-        System.out.println("ok");
-//        dozerMapper.map(null, null);
+        Source source = new Source();
+        source.setId(1);
+        source.setName("SourceName");
+        Destination destination = dozerMapper.map(source, Destination.class); 
+//        System.out.println(destination.getId());
+//        System.out.println(destination.getName());
+//        assertThat(1, is(destination.getId()));
+        
+        System.out.println(destination.getDestinationId());
+        System.out.println(destination.getDestinationName());
+        
     }
+    
 }
