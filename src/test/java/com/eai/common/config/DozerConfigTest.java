@@ -1,23 +1,19 @@
 package com.eai.common.config;
 
-import org.dozer.DozerBeanMapper;
 import org.dozer.Mapper;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.eai.common.config.model.Destination;
 import com.eai.common.config.model.Source;
-import com.ntt.coss.apiswext.DomainTestApplication;
 
 @RunWith(SpringRunner.class)
-//@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = DomainTestApplication.class)
-//@ContextConfiguration(classes = { DozerConfig.class })
-//@ContextConfiguration(locations = {"classpath*:/**/*Mapper.xml"})
+//@SpringBootTest(classes = DomainTestApplication.class)
+@ContextConfiguration(classes = { DozerConfig.class })
 //@Import({DozerConfig.class})
 public class DozerConfigTest {
     
